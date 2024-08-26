@@ -173,3 +173,9 @@ The benefits of using the Factory Design Pattern are:
 #### Class Diagram
 
 ![Image](../images/factory-with.png)
+
+## Example Use Cases
+
+- **Database Connection:** We can use the Factory Design Pattern to create database connections. The factory method can return a connection object based on the database type (e.g., MySQL, PostgreSQL, Oracle).
+- **Logger:** We can use the Factory Design Pattern to create logger objects. The factory method can return a logger object based on the logging level (e.g., Debug, Info, Error).
+- **Parser:** We can use the Factory Design Pattern to create parser objects. The factory method can return a parser object based on the file format (e.g., JSON, XML, CSV).

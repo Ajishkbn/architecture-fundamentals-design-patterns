@@ -265,3 +265,37 @@ In this example, the `GUIFactory` interface provides a way to create **families 
 
 - **Factory Method:** Use when the type of object to be created is determined by the factory method.
 - **Abstract Factory:** Use when the type of objects to be created is determined by the factory interface and you need to create families of related objects.
+
+## Example Use Case
+
+### Cross-Platform User Interfaces
+
+A software application needs to provide a consistent user interface across multiple operating systems (e.g., Windows, macOS, Linux).
+**Use Case:**
+
+- **Abstract Factory**: `GUIFactory`
+- **Abstract Products:** `Button`, `Label`
+- **Concrete Factories:** `WindowsFactory`, `macOSFactory`, `LinuxFactory`
+- **Concrete Products:** `WindowsButton`, `macOSButton`, `LinuxButton`, `WindowsLabel`, `macOSLabel`, `LinuxLabel`
+
+### Themed Applications
+
+An application needs to support multiple themes (e.g., Light Mode and Dark Mode), and each theme has its own set of UI components.
+
+**Use Case:**
+
+- **Abstract Factory:** `ThemeFactory`
+- **Abstract Products:** `Button`, `Label`
+- **Concrete Factories:** `LightThemeFactory`, `DarkThemeFactory`
+- **Concrete Products:** `LightButton`, `DarkButton`, `LightLabel`, `DarkLabel`
+
+### Vehicle Manufacturing
+
+A vehicle manufacturing company produces different types of vehicles (e.g., Cars, Trucks) and each vehicle type has its own set of components (e.g., Engine, Tire).
+
+**Use Case:**
+
+- **Abstract Factory:** `VehicleFactory`
+- **Abstract Products:** `Engine`, `Tire`
+- **Concrete Factories:** `CarFactory`, `TruckFactory`
+- **Concrete Products:** `CarEngine`, `CarTire`, `TruckEngine`, `TruckTire`
