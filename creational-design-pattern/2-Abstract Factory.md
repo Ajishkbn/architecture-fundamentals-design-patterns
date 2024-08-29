@@ -1,30 +1,6 @@
 # Abstract Factory Design Pattern
 
-- The Abstract Factory design pattern is a creational design pattern that provides a way to create families of related objects without specifying their concrete classes.
-
-## Class Diagram
-
-**Note:** Only go through this class digram after understanding the Button example given below.
-
-![Image](../images/abstract-factory.png)
-
-### Explanation
-
-1. `AbstractProductA` and `AbstractProductB`:
-
-    - These are the interfaces or abstract classes for the products that the factories will create. Each product family (`ProductA` and `ProductB`) has its own interface.
-2. `ConcreteProductA1`, `ConcreteProductA2`, `ConcreteProductB1`, and `ConcreteProductB2`:
-
-    - These are concrete implementations of the abstract products. For example, `ConcreteProductA1` is one variant of `AbstractProductA`, and `ConcreteProductA2` is another.
-3. `AbstractFactory`:
-
-    - This is the interface for creating families of related or dependent products. It declares methods for creating each abstract product.
-4. `ConcreteFactory1` and `ConcreteFactory2`:
-
-    - These are concrete implementations of the `AbstractFactory` interface. Each factory creates a specific variant of each product. For example, `ConcreteFactory1` creates `ConcreteProductA1` and `ConcreteProductB1`, while `ConcreteFactory2` creates `ConcreteProductA2` and `ConcreteProductB2`.
-5. Client:
-
-    - The client uses the abstract factory to create products. The client is only aware of the abstract interfaces (`AbstractProductA`, `AbstractProductB`, and `AbstractFactory`) and doesn't know about the concrete products or factories, which promotes loose coupling.
+Lets consider an example first.
 
 ## Button Example
 
@@ -299,3 +275,31 @@ A vehicle manufacturing company produces different types of vehicles (e.g., Cars
 - **Abstract Products:** `Engine`, `Tire`
 - **Concrete Factories:** `CarFactory`, `TruckFactory`
 - **Concrete Products:** `CarEngine`, `CarTire`, `TruckEngine`, `TruckTire`
+
+## Description
+
+- The Abstract Factory design pattern is a creational design pattern that provides a way to create families of related objects without specifying their concrete classes.
+
+## Class Diagram
+
+**Note:** Only go through this class digram after understanding the Button example given below.
+
+![Image](../images/abstract-factory.png)
+
+### Explanation
+
+1. `AbstractProductA` and `AbstractProductB`:
+
+    - These are the interfaces or abstract classes for the products that the factories will create. Each product family (`ProductA` and `ProductB`) has its own interface.
+2. `ConcreteProductA1`, `ConcreteProductA2`, `ConcreteProductB1`, and `ConcreteProductB2`:
+
+    - These are concrete implementations of the abstract products. For example, `ConcreteProductA1` is one variant of `AbstractProductA`, and `ConcreteProductA2` is another.
+3. `AbstractFactory`:
+
+    - This is the interface for creating families of related or dependent products. It declares methods for creating each abstract product.
+4. `ConcreteFactory1` and `ConcreteFactory2`:
+
+    - These are concrete implementations of the `AbstractFactory` interface. Each factory creates a specific variant of each product. For example, `ConcreteFactory1` creates `ConcreteProductA1` and `ConcreteProductB1`, while `ConcreteFactory2` creates `ConcreteProductA2` and `ConcreteProductB2`.
+5. Client:
+
+    - The client uses the abstract factory to create products. The client is only aware of the abstract interfaces (`AbstractProductA`, `AbstractProductB`, and `AbstractFactory`) and doesn't know about the concrete products or factories, which promotes loose coupling.

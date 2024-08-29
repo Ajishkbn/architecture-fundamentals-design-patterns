@@ -1,19 +1,6 @@
 # Factory Design Pattern
 
-- The Factory Design Pattern is a creational design pattern that provides a way to create objects without specifying the exact class of object that will be created.
-- It is a design pattern that provides a way to encapsulate the creation of objects.
-- This pattern is particularly useful when the exact type of the object that needs to be created is determined at runtime.
-
-## Class Diagram
-
-![Image](../images/factory-design-pattern.png)
-
-### Description
-
-- Factory Interface: The `Factory` interface declares the `factoryMethod()` that returns a `Product`. This is the core component responsible for defining the method that creates objects.
-- `ConcreteFactoryA` and `ConcreteFactoryB`: These are concrete implementations of the `Factory` interface. Each subclass implements the `factoryMethod()` to create and return an instance of the appropriate `ConcreteProduct`.
-- Product Interface: The `Product` interface defines the operations that all concrete products must implement.
-- `ConcreteProductA` and `ConcreteProductB`: These are concrete implementations of the `Product` interface, representing different types of products.
+Lets jump into an example first.
 
 ## Logger Example
 
@@ -179,3 +166,20 @@ The benefits of using the Factory Design Pattern are:
 - **Database Connection:** We can use the Factory Design Pattern to create database connections. The factory method can return a connection object based on the database type (e.g., MySQL, PostgreSQL, Oracle).
 - **Logger:** We can use the Factory Design Pattern to create logger objects. The factory method can return a logger object based on the logging level (e.g., Debug, Info, Error).
 - **Parser:** We can use the Factory Design Pattern to create parser objects. The factory method can return a parser object based on the file format (e.g., JSON, XML, CSV).
+
+## Description
+
+- The Factory Design Pattern is a creational design pattern that provides a way to create objects without specifying the exact class of object that will be created.
+- It is a design pattern that provides a way to encapsulate the creation of objects.
+- This pattern is particularly useful when the exact type of the object that needs to be created is determined at runtime.
+
+## Class Diagram
+
+![Image](../images/factory-design-pattern.png)
+
+### Description
+
+- Factory Interface: The `Factory` interface declares the `factoryMethod()` that returns a `Product`. This is the core component responsible for defining the method that creates objects.
+- `ConcreteFactoryA` and `ConcreteFactoryB`: These are concrete implementations of the `Factory` interface. Each subclass implements the `factoryMethod()` to create and return an instance of the appropriate `ConcreteProduct`.
+- Product Interface: The `Product` interface defines the operations that all concrete products must implement.
+- `ConcreteProductA` and `ConcreteProductB`: These are concrete implementations of the `Product` interface, representing different types of products.
